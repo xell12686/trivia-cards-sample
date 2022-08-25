@@ -1,0 +1,66 @@
+.Trivia {
+  background-color: #e0e0e0;
+  color: black;
+  font-size: 18px;
+  max-width: 430px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 200px auto;
+}
+
+.Trivia > div {
+  min-height: 600px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.Welcome * {
+  font-size: 26px;
+  max-width: 280px;
+}
+
+.question {
+  padding: 15px;
+  border: 2px solid black;
+  margin-top: auto;
+}
+
+.progress {
+  margin-bottom: auto;
+}
+.answer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.answer button {
+  padding: 15px;
+  border: 2px solid black;
+}
+
+.answer button:hover {
+  color: white;
+  background: black;
+}
