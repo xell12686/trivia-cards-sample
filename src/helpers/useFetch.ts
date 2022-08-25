@@ -12,7 +12,6 @@ function useFetch(url: string) {
       try {
         const response = await fetch(url);
         const json = await response.json();
-        console.log("await json: ", json.results);
         setData(json.results);
         setLoading(false);
       } catch (err) {
@@ -21,7 +20,7 @@ function useFetch(url: string) {
     };
 
     fetchData();
-  }, [url]);
+  }, [url, error]);
 
   return { data, loading, error };
 }

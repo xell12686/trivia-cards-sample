@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
+import DOMPurify from "isomorphic-dompurify";
 import { TriviaContext } from "../helpers/TriviaContext";
-import DOMPurify from "dompurify";
 
 export default function Questions() {
   const { questions, results, setResults } = useContext(TriviaContext);
@@ -21,6 +21,7 @@ export default function Questions() {
       <h3>{item.category}</h3>
       <div className="question">
         <h4
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(item.question),
           }}
@@ -34,7 +35,9 @@ export default function Questions() {
           </button>
         </div>
       </div>
-      <p className="progress">{itemIndex + 1} of 10</p>
+      <p className="progress">
+        {itemIndex + 1} of {questions.length}
+      </p>
     </div>
   );
 }

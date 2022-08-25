@@ -22,6 +22,7 @@ button {
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 15px;
+  font-size: 26px;
 }
 
 h3 {
@@ -63,4 +64,31 @@ h4 {
 .answer button:hover {
   color: white;
   background: black;
+}
+
+.Results ul {
+  display: block;
+  margin: 0 15px;
+  width: 100%;
+}
+.Results li {
+  text-align: left;
+  min-height: 40px;
+  padding: 5px 0 0 0;
+  gap: 30px;
+  margin: 15px;
+  padding-left: 50px;
+  background-image: url(/public/images/check.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 40px;
+}
+
+.Results li.wrong {
+  background-image: url(/public/images/cross.svg);
+  opacity: .3;
+}
+
+.Results h4 {
+  font-size: 18px;
 }
